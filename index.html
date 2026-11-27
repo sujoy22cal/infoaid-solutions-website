@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Infoaid Solutions provides IT infrastructure, networking, CCTV, software development, ERP and AI automation solutions for businesses in India.">
+  <meta name="theme-color" content="#101c9a">
+  <title>Infoaid Solutions | Technology Solutions for Modern Businesses</title>
+
+  <style>
+    :root {
+      --blue: #101c9a;
+      --orange: #f04b24;
+      --white: #ffffff;
+      --dark: #172033;
+      --light: #f4f6fc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; }
+
+    header {
+      background: white;
+      padding: 15px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 12px #00000012;
+    }
+
+    .brand {
+      font-size: 23px;
+      font-weight: bold;
+      color: var(--blue);
+    }
+
+    .brand span { color: var(--orange); }
+
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+
+    nav a { color: var(--dark); font-size: 14px; font-weight: 600; }
+
+    nav a:hover { color: var(--orange); }
+
+    .hero {
+      background: linear-gradient(120deg, #101c9a, #263bc0);
+      color: white;
+      padding: 105px 8%;
+      text-align: center;
+    }
+
+    .hero .tag {
+      color: #ffb39f;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.2;
+      margin: 20px auto;
+      max-width: 850px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      color: #e5e9ff;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      padding: 13px 27px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn:hover { background: #d93d1c; }
+
+    section { padding: 75px 8%; }
+
+    .heading { text-align: center; margin-bottom: 38px; }
+
+    .heading h2 {
+      color: var(--blue);
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .heading p { color: #647087; }
+
+    .about {
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .about p { margin-bottom: 15px; }
+
+    .services { background: var(--light); }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .service {
+      background: white;
+      padding: 27px;
+      border-radius: 9px;
+      border-bottom: 4px solid var(--orange);
+      box-shadow: 0 5px 20px #101c9a0c;
+      transition: transform .2s;
+    }
+
+    .service:hover { transform: translateY(-5px); }
+
+    .service .symbol {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .service h3 { color: var(--blue); margin-bottom: 10px; }
+
+    .service p { color: #667085; font-size: 14px; }
+
+    .why {
+      text-align: center;
+      background: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .why-item {
+      padding: 20px;
+      background: var(--light);
+      border-radius: 8px;
+    }
+
+    .why-item h3 { color: var(--blue); font-size: 18px; }
+
+    .contact {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 { font-size: 32px; margin-bottom: 12px; }
+
+    .contact p { color: #e0e5ff; margin-bottom: 22px; }
+
+    footer {
+      background: #10162b;
+      color: white;
+      padding: 25px 8%;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer a { color: #ff947a; }
+
+    @media(max-width: 700px) {
+      header { flex-direction: column; gap: 12px; }
+      nav { justify-content: center; gap: 12px; }
+      .hero { padding: 75px 6%; }
+      section { padding: 55px 6%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="brand">INFOAID <span>SOLUTIONS</span></a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="tag">Your Technology Partner</div>
+    <h1>Technology Solutions for Modern Businesses</h1>
+    <p>
+      Empowering small and medium businesses with reliable IT
+      infrastructure, networking, security, software and intelligent
+      automation solutions.
+    </p>
+    <a href="#services" class="btn">Explore Our Services</a>
+  </section>
+
+  <section id="about">
+    <div class="heading">
+      <h2>About Infoaid Solutions</h2>
+      <p>Technology that helps businesses grow.</p>
+    </div>
+    <div class="about">
+      <p>
+        Infoaid Solutions is a technology solutions provider based in
+        Kolkata, West Bengal, India. We focus on helping businesses
+        improve their operations through dependable technology.
+      </p>
+      <p>
+        Our service areas include IT infrastructure, networking,
+        CCTV surveillance, software development, ERP systems and
+        AI-powered business automation.
+      </p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="heading">
+      <h2>Our Services</h2>
+      <p>Complete technology solutions under one roof.</p>
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service">
+        <div class="symbol">🖥️</div>
+        <h3>IT Infrastructure</h3>
+        <p>Server installation, maintenance, IT support and infrastructure management.</p>
+      </article>
+
+      <article class="service">
+        <div class="symbol">🌐</div>
+        <h3>Networking Solutions</h3>
+        <p>LAN, WAN, Wi-Fi, structured cabling and network management.</p>
+      </article>
+
+      <article class="service">
+        <div class="symbol">📹</div>
+        <h3>CCTV & Security</h3>
+        <p>IP cameras, surveillance systems, NVR installation and monitoring.</p>
+      </article>
+
+      <article class="service">
+        <div class="symbol">💻</div>
+        <h3>Software Development</h3>
+        <p>Business applications and customized software solutions.</p>
+      </article>
+
+      <article class="service">
+        <div class="symbol">📊</div>
+        <h3>ERP Solutions</h3>
+        <p>Business process management, workflow automation and reporting systems.</p>
+      </article>
+
+      <article class="service">
+        <div class="symbol">🤖</div>
+        <h3>AI Automation</h3>
+        <p>AI assistants, intelligent workflows and business process automation.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="heading">
+      <h2>Why Choose Infoaid Solutions?</h2>
+      <p>Practical technology for growing businesses.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>Reliable Support</h3>
+        <p>Dependable technology assistance.</p>
+      </div>
+      <div class="why-item">
+        <h3>Integrated Solutions</h3>
+        <p>Multiple technology services in one place.</p>
+      </div>
+      <div class="why-item">
+        <h3>Business Focused</h3>
+        <p>Solutions designed around business needs.</p>
+      </div>
+      <div class="why-item">
+        <h3>Modern Technology</h3>
+        <p>Building with modern software and AI.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Let's Build Something Better</h2>
+    <p>
+      Looking for IT, networking, CCTV, ERP or AI automation solutions?
+      Get in touch with Infoaid Solutions.
+    </p>
+    <p><strong>Location:</strong> Kolkata, West Bengal, India</p>
+    <a class="btn" href="mailto:">Contact Us</a>
+    <p style="font-size:12px;margin-top:15px;">
+      Contact email and phone details will be added after confirmation.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Infoaid Solutions. All rights reserved.</p>
+  <p>Technology Solutions for Modern Businesses</p>
+  <p><a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
