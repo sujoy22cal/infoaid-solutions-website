@@ -2,328 +2,813 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Infoaid Solutions provides IT infrastructure, networking, CCTV, software development, ERP and AI automation solutions for businesses in India.">
-  <meta name="theme-color" content="#101c9a">
-  <title>Infoaid Solutions | Technology Solutions for Modern Businesses</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root {
-      --blue: #101c9a;
-      --orange: #f04b24;
-      --white: #ffffff;
-      --dark: #172033;
-      --light: #f4f6fc;
-    }
+<title>Infoaid Solutions | IT Infrastructure, ERP & AI Automation</title>
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<meta name="description" content="Infoaid Solutions, Kolkata provides IT infrastructure, networking, CCTV security, custom software, ERP and AI automation solutions for small and medium businesses.">
 
-    body {
-      font-family: Arial, sans-serif;
-      color: var(--dark);
-      line-height: 1.7;
-    }
+<meta name="keywords" content="IT Solutions Kolkata, Networking, CCTV, ERP Software, AI Automation, IT Infrastructure, Software Development">
 
-    a { text-decoration: none; }
+<meta name="theme-color" content="#111d91">
+<meta name="robots" content="index, follow">
 
-    header {
-      background: white;
-      padding: 15px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 12px #00000012;
-    }
+<link rel="canonical" href="https://infoaidsolutions.co.in/">
 
-    .brand {
-      font-size: 23px;
-      font-weight: bold;
-      color: var(--blue);
-    }
+<style>
+:root {
+  --blue: #111d91;
+  --blue2: #2639bb;
+  --orange: #f04b24;
+  --dark: #172033;
+  --muted: #667085;
+  --light: #f5f7fc;
+  --white: #fff;
+  --border: #e6eaf2;
+}
 
-    .brand span { color: var(--orange); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+html { scroll-behavior: smooth; scroll-padding-top: 85px; }
 
-    nav a { color: var(--dark); font-size: 14px; font-weight: 600; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  line-height: 1.7;
+}
 
-    nav a:hover { color: var(--orange); }
+a { text-decoration: none; color: inherit; }
 
-    .hero {
-      background: linear-gradient(120deg, #101c9a, #263bc0);
-      color: white;
-      padding: 105px 8%;
-      text-align: center;
-    }
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
 
-    .hero .tag {
-      color: #ffb39f;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-size: 13px;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.97);
+  box-shadow: 0 3px 18px #101c9a12;
+}
 
-    .hero h1 {
-      font-size: clamp(34px, 5vw, 56px);
-      line-height: 1.2;
-      margin: 20px auto;
-      max-width: 850px;
-    }
+.navbar {
+  min-height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
 
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto 30px;
-      color: #e5e9ff;
-      font-size: 18px;
-    }
+.brand {
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: -.7px;
+  white-space: nowrap;
+}
 
-    .btn {
-      display: inline-block;
-      background: var(--orange);
-      color: white;
-      padding: 13px 27px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
+.brand span { color: var(--orange); }
 
-    .btn:hover { background: #d93d1c; }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
 
-    section { padding: 75px 8%; }
+.nav-links a {
+  font-size: 14px;
+  font-weight: 700;
+}
 
-    .heading { text-align: center; margin-bottom: 38px; }
+.nav-links a:hover { color: var(--orange); }
 
-    .heading h2 {
-      color: var(--blue);
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+.nav-links .nav-cta {
+  color: white;
+  background: var(--orange);
+  padding: 10px 18px;
+  border-radius: 5px;
+}
 
-    .heading p { color: #647087; }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 27px;
+  cursor: pointer;
+  color: var(--blue);
+}
 
-    .about {
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
+.hero {
+  color: white;
+  background:
+    radial-gradient(circle at 85% 20%, #5368ef55, transparent 30%),
+    linear-gradient(125deg, #101a82, #293fc4);
+  padding: 110px 0 115px;
+  text-align: center;
+}
 
-    .about p { margin-bottom: 15px; }
+.eyebrow {
+  color: #ffb49e;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-    .services { background: var(--light); }
+.hero h1 {
+  font-size: clamp(36px, 5.5vw, 61px);
+  line-height: 1.15;
+  max-width: 900px;
+  margin: 23px auto;
+}
 
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-    }
+.hero p {
+  font-size: 18px;
+  color: #e3e8ff;
+  max-width: 760px;
+  margin: 0 auto 32px;
+}
 
-    .service {
-      background: white;
-      padding: 27px;
-      border-radius: 9px;
-      border-bottom: 4px solid var(--orange);
-      box-shadow: 0 5px 20px #101c9a0c;
-      transition: transform .2s;
-    }
+.button {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  padding: 14px 27px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: .2s;
+}
 
-    .service:hover { transform: translateY(-5px); }
+.button:hover {
+  background: #d83d1c;
+  transform: translateY(-2px);
+}
 
-    .service .symbol {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
+.button-outline {
+  background: transparent;
+  border: 1px solid white;
+  margin-left: 10px;
+}
 
-    .service h3 { color: var(--blue); margin-bottom: 10px; }
+.button-outline:hover { background: white; color: var(--blue); }
 
-    .service p { color: #667085; font-size: 14px; }
+.trust-strip {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 22px 0;
+}
 
-    .why {
-      text-align: center;
-      background: white;
-    }
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 15px;
+}
 
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 25px;
-      margin-top: 35px;
-    }
+.trust-grid strong {
+  color: var(--blue);
+  font-size: 15px;
+}
 
-    .why-item {
-      padding: 20px;
-      background: var(--light);
-      border-radius: 8px;
-    }
+section { padding: 85px 0; }
 
-    .why-item h3 { color: var(--blue); font-size: 18px; }
+.section-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 45px;
+}
 
-    .contact {
-      background: var(--blue);
-      color: white;
-      text-align: center;
-    }
+.section-heading .eyebrow { color: var(--orange); }
 
-    .contact h2 { font-size: 32px; margin-bottom: 12px; }
+.section-heading h2 {
+  font-size: 34px;
+  line-height: 1.25;
+  color: var(--blue);
+  margin: 10px 0;
+}
 
-    .contact p { color: #e0e5ff; margin-bottom: 22px; }
+.section-heading p { color: var(--muted); }
 
-    footer {
-      background: #10162b;
-      color: white;
-      padding: 25px 8%;
-      text-align: center;
-      font-size: 13px;
-    }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+  gap: 55px;
+}
 
-    footer a { color: #ff947a; }
+.about-content h2 {
+  font-size: 34px;
+  color: var(--blue);
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
 
-    @media(max-width: 700px) {
-      header { flex-direction: column; gap: 12px; }
-      nav { justify-content: center; gap: 12px; }
-      .hero { padding: 75px 6%; }
-      section { padding: 55px 6%; }
-    }
-  </style>
+.about-content p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.about-panel {
+  background: linear-gradient(140deg, var(--blue), #3449cb);
+  color: white;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.about-panel h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.about-panel p { color: #e2e7ff; }
+
+.about-panel li {
+  list-style: none;
+  margin: 12px 0;
+}
+
+.about-panel li::before {
+  content: "✓";
+  color: #ffad91;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.services { background: var(--light); }
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: .25s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px #101c9a13;
+  border-color: #aab7f0;
+}
+
+.service-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #eef0ff;
+  font-size: 27px;
+  margin-bottom: 19px;
+}
+
+.service-card h3 {
+  color: var(--blue);
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.service-link {
+  display: inline-block;
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 17px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  padding: 25px 20px;
+  background: var(--light);
+  border-radius: 10px;
+  border-top: 3px solid var(--orange);
+}
+
+.why-card h3 {
+  color: var(--blue);
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.why-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.process { background: var(--light); }
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.process-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.process-card span {
+  font-size: 27px;
+  font-weight: bold;
+  color: var(--orange);
+}
+
+.process-card h3 {
+  color: var(--blue);
+  margin: 8px 0;
+}
+
+.process-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.contact {
+  background: linear-gradient(120deg, #111d91, #283ec0);
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: #e0e6ff;
+  max-width: 680px;
+  margin: 0 auto 18px;
+}
+
+.contact-info {
+  display: inline-block;
+  padding: 16px 25px;
+  margin: 10px auto 25px;
+  border: 1px solid #ffffff55;
+  border-radius: 8px;
+}
+
+.contact .button { background: var(--orange); }
+
+footer {
+  background: #10162b;
+  color: white;
+  padding: 45px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+footer h3 { margin-bottom: 12px; }
+
+footer p, footer a {
+  color: #bdc6db;
+  font-size: 14px;
+}
+
+footer a:hover { color: white; }
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.copyright {
+  border-top: 1px solid #ffffff20;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #aeb9d1;
+}
+
+@media(max-width:850px) {
+  .menu-toggle { display: block; }
+
+  .navbar { flex-wrap: wrap; padding: 13px 0; }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-bottom: 10px;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links a { padding: 11px; }
+
+  .nav-links .nav-cta { text-align: center; }
+
+  .about-grid { grid-template-columns: 1fr; }
+
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .why-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width:550px) {
+  .brand { font-size: 21px; }
+
+  .hero { padding: 75px 0; }
+
+  .hero p { font-size: 16px; }
+
+  .button-outline {
+    margin: 12px 0 0;
+  }
+
+  section { padding: 60px 0; }
+
+  .section-heading h2, .about-content h2 { font-size: 28px; }
+
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .service-grid, .why-grid, .process-grid,
+  .footer-grid { grid-template-columns: 1fr; }
+
+  .about-panel { padding: 28px; }
+
+  .contact h2 { font-size: 29px; }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <a href="#" class="brand">INFOAID <span>SOLUTIONS</span></a>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="container navbar">
+    <a href="#home" class="brand">INFOAID <span>SOLUTIONS</span></a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation" aria-expanded="false"
+      aria-controls="navLinks">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#contact" class="nav-cta">Contact Us</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-  <section class="hero" id="home">
-    <div class="tag">Your Technology Partner</div>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="eyebrow">Your Technology Partner</div>
+
     <h1>Technology Solutions for Modern Businesses</h1>
+
     <p>
       Empowering small and medium businesses with reliable IT
-      infrastructure, networking, security, software and intelligent
-      automation solutions.
+      infrastructure, networking, security, software development,
+      ERP systems and intelligent AI automation.
     </p>
-    <a href="#services" class="btn">Explore Our Services</a>
-  </section>
 
-  <section id="about">
-    <div class="heading">
-      <h2>About Infoaid Solutions</h2>
-      <p>Technology that helps businesses grow.</p>
-    </div>
-    <div class="about">
+    <a href="#services" class="button">Explore Our Services</a>
+    <a href="#contact" class="button button-outline">Talk to Us</a>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="container trust-grid">
+    <strong>IT Infrastructure</strong>
+    <strong>Network Solutions</strong>
+    <strong>Business Software</strong>
+    <strong>AI Automation</strong>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container about-grid">
+
+    <div class="about-content">
+      <div class="eyebrow">About Our Company</div>
+      <h2>Technology That Moves Your Business Forward</h2>
+
       <p>
-        Infoaid Solutions is a technology solutions provider based in
-        Kolkata, West Bengal, India. We focus on helping businesses
-        improve their operations through dependable technology.
+        Infoaid Solutions is a technology solutions provider based
+        in Kolkata, West Bengal, India, focused on supporting small
+        and medium businesses with practical technology solutions.
       </p>
+
       <p>
-        Our service areas include IT infrastructure, networking,
-        CCTV surveillance, software development, ERP systems and
+        We work across IT infrastructure, networking, CCTV
+        surveillance, software development, ERP applications and
         AI-powered business automation.
       </p>
-    </div>
-  </section>
 
-  <section class="services" id="services">
-    <div class="heading">
-      <h2>Our Services</h2>
-      <p>Complete technology solutions under one roof.</p>
+      <p>
+        Our approach is to understand business requirements and
+        provide suitable technology solutions that help improve
+        operational efficiency and business processes.
+      </p>
+
+      <a href="#contact" class="button">Discuss Your Requirements</a>
+    </div>
+
+    <div class="about-panel">
+      <h3>Our Technology Focus</h3>
+      <ul>
+        <li>IT infrastructure and support</li>
+        <li>Enterprise networking solutions</li>
+        <li>CCTV and security systems</li>
+        <li>Custom software applications</li>
+        <li>ERP and business management systems</li>
+        <li>AI-powered workflow automation</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">What We Do</div>
+      <h2>Our Technology Services</h2>
+      <p>
+        Integrated technology services to help businesses
+        manage infrastructure, operations and digital growth.
+      </p>
     </div>
 
     <div class="service-grid">
 
-      <article class="service">
-        <div class="symbol">🖥️</div>
+      <article class="service-card">
+        <div class="service-icon">🖥️</div>
         <h3>IT Infrastructure</h3>
-        <p>Server installation, maintenance, IT support and infrastructure management.</p>
+        <p>
+          Server installation, hardware support, IT maintenance,
+          system administration and infrastructure management.
+        </p>
+        <a href="#contact" class="service-link">Enquire Now →</a>
       </article>
 
-      <article class="service">
-        <div class="symbol">🌐</div>
+      <article class="service-card">
+        <div class="service-icon">🌐</div>
         <h3>Networking Solutions</h3>
-        <p>LAN, WAN, Wi-Fi, structured cabling and network management.</p>
+        <p>
+          LAN, WAN, Wi-Fi, structured cabling, network
+          configuration, monitoring and troubleshooting.
+        </p>
+        <a href="#contact" class="service-link">Enquire Now →</a>
       </article>
 
-      <article class="service">
-        <div class="symbol">📹</div>
+      <article class="service-card">
+        <div class="service-icon">📹</div>
         <h3>CCTV & Security</h3>
-        <p>IP cameras, surveillance systems, NVR installation and monitoring.</p>
+        <p>
+          IP CCTV cameras, NVR systems, surveillance installation,
+          configuration and monitoring solutions.
+        </p>
+        <a href="#contact" class="service-link">Enquire Now →</a>
       </article>
 
-      <article class="service">
-        <div class="symbol">💻</div>
+      <article class="service-card">
+        <div class="service-icon">💻</div>
         <h3>Software Development</h3>
-        <p>Business applications and customized software solutions.</p>
+        <p>
+          Customized business applications, web applications,
+          digital tools and workflow-based software solutions.
+        </p>
+        <a href="#contact" class="service-link">Enquire Now →</a>
       </article>
 
-      <article class="service">
-        <div class="symbol">📊</div>
+      <article class="service-card">
+        <div class="service-icon">📊</div>
         <h3>ERP Solutions</h3>
-        <p>Business process management, workflow automation and reporting systems.</p>
+        <p>
+          Business process management, procurement systems,
+          inventory management, dashboards and reporting.
+        </p>
+        <a href="#contact" class="service-link">Enquire Now →</a>
       </article>
 
-      <article class="service">
-        <div class="symbol">🤖</div>
+      <article class="service-card">
+        <div class="service-icon">🤖</div>
         <h3>AI Automation</h3>
-        <p>AI assistants, intelligent workflows and business process automation.</p>
+        <p>
+          AI assistants, chatbots, intelligent workflows,
+          document processing and business process automation.
+        </p>
+        <a href="#contact" class="service-link">Enquire Now →</a>
       </article>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="why">
-    <div class="heading">
+<section id="why">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Our Approach</div>
       <h2>Why Choose Infoaid Solutions?</h2>
-      <p>Practical technology for growing businesses.</p>
+      <p>
+        Practical, integrated and business-focused technology
+        solutions for growing organizations.
+      </p>
     </div>
-    <div class="why-grid">
-      <div class="why-item">
-        <h3>Reliable Support</h3>
-        <p>Dependable technology assistance.</p>
-      </div>
-      <div class="why-item">
-        <h3>Integrated Solutions</h3>
-        <p>Multiple technology services in one place.</p>
-      </div>
-      <div class="why-item">
-        <h3>Business Focused</h3>
-        <p>Solutions designed around business needs.</p>
-      </div>
-      <div class="why-item">
-        <h3>Modern Technology</h3>
-        <p>Building with modern software and AI.</p>
-      </div>
-    </div>
-  </section>
 
-  <section class="contact" id="contact">
+    <div class="why-grid">
+
+      <div class="why-card">
+        <h3>Business Focused</h3>
+        <p>Solutions aligned with actual business requirements.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Integrated Services</h3>
+        <p>Infrastructure, security, software and automation.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Modern Technology</h3>
+        <p>Technology solutions using modern digital platforms.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Flexible Solutions</h3>
+        <p>Approaches suitable for different business needs.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">How We Work</div>
+      <h2>Our Working Approach</h2>
+      <p>A clear process to understand requirements and deliver suitable solutions.</p>
+    </div>
+
+    <div class="process-grid">
+
+      <div class="process-card">
+        <span>01</span>
+        <h3>Understand</h3>
+        <p>Understand your business requirements and challenges.</p>
+      </div>
+
+      <div class="process-card">
+        <span>02</span>
+        <h3>Plan</h3>
+        <p>Identify suitable technology and implementation options.</p>
+      </div>
+
+      <div class="process-card">
+        <span>03</span>
+        <h3>Implement</h3>
+        <p>Develop and implement the agreed technology solution.</p>
+      </div>
+
+      <div class="process-card">
+        <span>04</span>
+        <h3>Support</h3>
+        <p>Provide agreed assistance and ongoing improvements.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+
+    <div class="eyebrow">Get In Touch</div>
+
     <h2>Let's Build Something Better</h2>
+
     <p>
-      Looking for IT, networking, CCTV, ERP or AI automation solutions?
-      Get in touch with Infoaid Solutions.
+      Looking for reliable IT infrastructure, networking,
+      CCTV, ERP, software development or AI automation solutions?
+      Let's discuss your business requirements.
     </p>
-    <p><strong>Location:</strong> Kolkata, West Bengal, India</p>
-    <a class="btn" href="mailto:">Contact Us</a>
-    <p style="font-size:12px;margin-top:15px;">
-      Contact email and phone details will be added after confirmation.
+
+    <div class="contact-info">
+      <strong>Location</strong><br>
+      Kolkata, West Bengal, India
+    </div>
+
+    <br>
+
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Kolkata%2C+West+Bengal%2C+India"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="button">
+      Find Us on Google Maps
+    </a>
+
+    <p style="font-size:13px;margin-top:20px;">
+      Phone and business email details will be published
+      after confirmation.
     </p>
-  </section>
+
+  </div>
+</section>
+
 </main>
 
 <footer>
-  <p>© 2026 Infoaid Solutions. All rights reserved.</p>
-  <p>Technology Solutions for Modern Businesses</p>
-  <p><a href="privacy.html">Privacy Policy</a></p>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>INFOAID <span style="color:#ff754f;">SOLUTIONS</span></h3>
+        <p>Technology Solutions for Modern Businesses.</p>
+        <p>Kolkata, West Bengal, India</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Our Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Our Services</h3>
+        <div class="footer-links">
+          <a href="#services">IT Infrastructure</a>
+          <a href="#services">Networking</a>
+          <a href="#services">CCTV Security</a>
+          <a href="#services">ERP & Software</a>
+          <a href="#services">AI Automation</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      <p>© <span id="year"></span> Infoaid Solutions. All rights reserved.</p>
+      <p>Technology Solutions for Modern Businesses.</p>
+    </div>
+
+  </div>
 </footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+  const isOpen = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", isOpen);
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation" : "Open navigation"
+  );
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation");
+  });
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
 
 </body>
 </html>
